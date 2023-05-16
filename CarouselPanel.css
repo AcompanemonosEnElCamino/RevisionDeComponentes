@@ -1,0 +1,138 @@
+.container-fluid {
+  background-color:   #3c9c64  ;
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  border: none;
+  width: 100%;
+}
+
+
+.arrow {
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.arrow.left {
+  margin-right: 20px;
+}
+
+.central-left-image {
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5); /* Agrega una sombra para dar un efecto de flotación */
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 50px;
+  border-radius: 50%; /* Hace que la imagen sea un círculo */
+  border: 4px solid green; /* Agrega un borde alrededor de la imagen */
+}
+
+.green-button {
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5); 
+  background-color: #3c9c64;
+  color: white;
+  border: none;
+  border-radius: 10px; /* Agregar esta línea para redondear el botón */
+  padding: 10px 20px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.name {
+  color: white;
+  text-transform: uppercase;
+}
+
+.title {
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.paragraph {
+  color: white;
+}
+
+.static-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background-color:  #3c9c64 ;
+  color: white;
+}
+
+.box-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px; /* Agrega un margen a la derecha del icono */
+}
+
+@media (max-width: 768px) {
+  .container-fluid {
+    flex-direction: column;
+    padding: 0px;
+    gap: 30px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .central-left-image {
+    padding: 0px;
+    width: 250px;
+    height: 250px;
+    margin-right: 0;
+    margin-top: 100px;
+    border-radius: 50%; /* Hace que la imagen sea un círculo */
+    border: 3px solid green;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .arrow.left {
+    left: 10px;
+  }
+
+  .arrow.right {
+    right: 10px;
+  }
+
+  .text-container {
+    align-items: center;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .green-button {
+    position: static;
+  }
+
+  .static-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* En vista móvil, haga que la caja cubra todo el ancho */
+  }
+}

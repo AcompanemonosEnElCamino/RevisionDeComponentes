@@ -1,0 +1,75 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8); /* Cambia el overlay a blanco semi-transparente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Asegurarse de que el overlay esté por encima de otros elementos */
+  backdrop-filter: blur(5px); /* Desenfocar el contenido detrás del overlay */
+}
+
+.modal-content {
+  background-color: white; /* Hacer el contenido del modal completamente opaco y blanco */
+  padding: 20px;
+  border-radius: 15px;
+  position: relative;
+  width: 60%;
+  max-height: 80%;
+  max-width: 50%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Agrega una sombra para dar un efecto de flotación */
+  margin: 2%; /* Agrega un margen alrededor del contenido del modal */
+}
+
+.modal-img {
+  width: 50%;
+  max-width: 100px;
+  margin-bottom: 20px;
+  border-radius: 50%; /* Hace que la imagen sea un círculo */
+  border: 3px solid green;
+}
+
+.modal-title,
+.modal-text {
+  margin: 20px 0;
+  width: 80%;
+  text-align: justify;
+}
+
+.close-button {
+  position: static;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: black;
+  cursor: pointer;
+  align-self: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 80%;
+    justify-content: flex-start;
+    width: 90%;
+  }
+
+  .modal-img {
+    
+  margin-top: 0px;
+    width: 100%;
+    max-width: 150px;
+  }
+
+  .modal-text {
+    width: 90%;
+  }
+}

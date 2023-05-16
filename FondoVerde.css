@@ -1,0 +1,57 @@
+.fondo-verde {
+    border: 0px solid green; 
+    overflow: hidden; 
+    position: relative; 
+    width: 100%;
+    height: 100vh;
+}
+
+.fondo-verde img {
+    object-fit: cover; 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.quote {
+    color: #006400;
+    font-weight: bold;
+    font-size: 3.5rem;
+    line-height: 0.8;
+}
+
+.fondo-verde h1 {
+    font-family: 'Montserrat', sans-serif;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.fondo-verde h2 {
+    font-size: 1.5rem; /* Tamaño para móviles */
+    margin: 0 1rem; /* Márgenes para móviles */
+    overflow: hidden; /* Agrega esto */
+    border-right: .15em solid transparent; /* Cambia a transparente */
+    white-space: nowrap;
+    animation: typing 4s steps(40, end) forwards;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@media (min-width: 768px) {
+    .fondo-verde h1 {
+        font-size: 3rem; /* Aumenta el tamaño para pantallas más grandes */
+    }
+
+    .fondo-verde h2 {
+        font-size: 2rem; /* Aumenta el tamaño para pantallas más grandes */
+        margin: 0; /* Remueve los márgenes para pantallas más grandes */
+    }
+
+    .fondo-verde h2 {
+        animation: typing 4s steps(40, end) forwards;
+    }
+}
